@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__figma-dev-mode-mcp-server__get_code",
+      "mcp__figma-dev-mode-mcp-server__get_image",
+      "Bash(curl:*)",
+      "Bash(npm start)",
+      "Bash(npm run build:*)",
+      "Bash(dir:*)",
+      "Bash(mkdir:*)",
+      "Bash(cp:*)",
+      "Bash(rsync:*)",
+      "Bash(rm:*)",
+      "Bash(git init:*)"
+    ],
+    "deny": []
+  }
+}
