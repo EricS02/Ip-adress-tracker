@@ -124,7 +124,7 @@ function App() {
       <header className="flex flex-col items-center">
 
         <div className="relative w-full">
-          <img src="./pattern-bg-desktop.png" alt="pattern-bg-desktop" className="w-full h-[280px] object-cover z-10" />
+          <img src="/pattern-bg-desktop.png" alt="pattern-bg-desktop" className="w-full h-[280px] object-cover z-10" />
           <div className="absolute inset-0 flex flex-col items-center justify-start pt-14 z-30 px-4">
             <h1 className="hidden sm:block text-white text-center text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
               IP Address Tracker

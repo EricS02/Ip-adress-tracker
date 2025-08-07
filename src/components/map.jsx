@@ -34,7 +34,7 @@ function MapComponent({ userGeolocation, searchGeolocation }) {
 
     // Use the new Figma location icon
     L.Marker.prototype.options.icon = L.icon({
-        iconUrl: './icon-location-new.svg',
+        iconUrl: '/icon-location-new.svg',
         iconSize: [45.78, 55.11],
         iconAnchor: [0, 0], // Center horizontally, bottom vertically
        
