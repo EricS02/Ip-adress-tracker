@@ -29,6 +29,15 @@ function App() {
         timezone: data.location?.timezone || 'Timezone not available',
         isp: data.isp || 'ISP not available'
       })
+      
+      // Set map location for user's IP
+      if (data.location?.lat && data.location?.lng) {
+        setSearchGeolocation({
+          latitude: data.location.lat,
+          longitude: data.location.lng
+        })
+      }
+      
       setIsLoading(false)
     } catch (error) {
       setError(error.message)
@@ -43,7 +52,7 @@ function App() {
 
     try {
       // Use the correct ipify endpoint that returns coordinates
-      const response = await fetch(`https://geo.ipify.org/api/v2/country?apiKey=${process.env.REACT_APP_IPIFY_API_KEY}&ipAddress=${searchInput}`)
+      const response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${process.env.REACT_APP_IPIFY_API_KEY}&ipAddress=${searchInput}`)
       const data = await response.json()
       
       console.log('Search API Response:', data); // Debug log
