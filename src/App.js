@@ -15,7 +15,7 @@ function App() {
 
   const fetchUserIpData = async () => {
     try {
-      const response = await fetch('https://geo.ipify.org/api/v2/country,city?apiKey=at_1ft7vx9dUY4eF9m34x5orKwNBfdMk')
+      const response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${process.env.REACT_APP_IPIFY_API_KEY}`)
       const data = await response.json()
       
       console.log('API Response:', data); // Debug log
@@ -43,7 +43,7 @@ function App() {
 
     try {
       // Use the correct ipify endpoint that returns coordinates
-      const response = await fetch(`https://geo.ipify.org/api/v2/country?apiKey=${process.env.secret_key}&ipAddress=${searchInput}`)
+      const response = await fetch(`https://geo.ipify.org/api/v2/country?apiKey=${process.env.REACT_APP_IPIFY_API_KEY}&ipAddress=${searchInput}`)
       const data = await response.json()
       
       console.log('Search API Response:', data); // Debug log
